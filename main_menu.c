@@ -44,7 +44,7 @@ int mainMenu() {
 
 
 
-        loadFromFile(&employees, &count, "employees.csv");
+        loadFromFile(&employees, &count, "employees.txt");
 
 
         while (1) {
@@ -62,7 +62,7 @@ int mainMenu() {
             printf("Enter your choice: ");
             scanf("%d", &choice);
 
-            switch ((menuOption)choice) {
+            switch (choice) {
             case ADDEMPLOYEE:
                 addEmployee(&employees, &count);
                 break;
@@ -94,7 +94,7 @@ int mainMenu() {
                 sortEmployeesByDesignation(employees, count);
                 break;
             case SAVETOFILE:
-                saveToFile(employees, count, "employees.csv");
+                saveToFile(employees, count, "employees.txt");
 
                 break;
             case EXIT:

@@ -35,7 +35,7 @@ void updateEmployee(Employee *employees, int count, int id) {
                 printf("Enter your choice: ");
                 scanf("%d", &choice);
 
-                switch ((updateMenu)choice) {
+                switch (choice) {
                 case NAME:
                     printf("Enter new name: ");
                     scanf(" %[^\n]", employees[i].name);
